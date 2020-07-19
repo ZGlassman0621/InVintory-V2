@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+admin = User.create(username: "admin2", email: "admin2@admin.com", password: "12345678")
+
+hall = Wine.create(winery: "Hall", wine_name: "Jack's Masterpiece", vintage: "2015")
+
+bouchon = Restaurant.create(name: "Bouchon", location: "Yountville")
