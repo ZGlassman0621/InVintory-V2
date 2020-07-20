@@ -16,6 +16,7 @@ class WinesController < ApplicationController
   # POST /wines
   def create
     @wine = Wine.new(wine_params)
+    @restaurant = Restaurant.find(params[:restaurant_id])
 
     if @wine.save
       render json: @wine, status: :created, location: @wine
