@@ -8,10 +8,9 @@ class RestaurantsController < ApplicationController
     render json: @restaurants
   end
 
-  # include: :wines added 7/19 11am
   # GET /restaurants/1
   def show
-    render json: @restaurant, include: :wines
+    render json: @restaurant
   end
 
   # POST /restaurants

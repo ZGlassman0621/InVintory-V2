@@ -4,6 +4,7 @@ class CreateWines < ActiveRecord::Migration[6.0]
       t.string :winery
       t.string :wine_name
       t.string :vintage
+      t.string :bottles
 
       t.timestamps
     end

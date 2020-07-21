@@ -16,7 +16,6 @@ class WinesController < ApplicationController
   # POST /wines
   def create
     @wine = Wine.new(wine_params)
-    @restaurant = Restaurant.find(params[:restaurant_id])
 
     if @wine.save
       render json: @wine, status: :created, location: @wine
@@ -47,6 +46,6 @@ class WinesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def wine_params
-      params.require(:wine).permit(:winery, :wine_name, :vintage)
+      params.require(:wine).permit(:winery, :wine_name, :vintage, :bottles)
     end
 end
