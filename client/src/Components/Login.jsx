@@ -1,20 +1,20 @@
-import logo from "https://i.imgur.com/6NaNMw0.png";
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import Header from '/Header.jsx';
-import Buttons from '/Buttons.jsx'
+
 
 export default class Login extends Component {
   state = {
     username: "",
     password: ""
   }
+
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
       [name]: value
     })
   }
+
   render() {
     const { username, password } = this.state;
     const { handleLogin, history } = this.props;
@@ -25,17 +25,29 @@ export default class Login extends Component {
         handleLogin(this.state);
         history.push('/')
       }}>
-        <div>
-          <label class="userField">Username:</label>
-          <input type="text" placeholder="Enter Username" name="username" required value={username} onChange={this.handleChange}></input>
-          <br />
-          <label class="passField">Password:</label>
-          <input type="text" placeholder="Enter Password" name="password" required value={password} onChange={this.handleChange}></input>
-          <br />
-          <button class="loginButton">LOGIN</button>
-          <button class="newUser">CREATE NEW USER</button>
-        </div>
-        )
+        <h3>Login</h3>
+        <label>
+          Username:
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={this.handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+        </label>
+        <br />
+        <button Link to='/Register'>CREATE NEW USER</button>
+        <button Link to='/Main'>Submit</button>
       </form>
     )
   }

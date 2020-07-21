@@ -1,10 +1,6 @@
-import React, {Component} from "react";
-import "./App.css";
-import Header from "/Components/Header.jsx"
-import Components from "/Components"
-
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
-import Main from './components/Main'
+import React, { Component } from 'react'
+import { loginUser, registerUser, removeToken, verifyUser } from '../src/Services/auth.js'
+import Main from './Components/Main.jsx'
 import { withRouter } from 'react-router-dom';
 
 class App extends Component {
@@ -43,9 +39,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header
+        <Main
           currentUser={this.state.currentUser}
-          handleLogout={this.handleLogout}
+          handleLogin={this.handleLogin}
+          handleRegister={this.handleRegister}
         />
       </div>
     )
