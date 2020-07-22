@@ -160,4 +160,4 @@ https://app.lucidchart.com/invitations/accept/d7779d06-d5cf-46fa-bdab-cdeeb681d3
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+<!-- Wow, what a week and a half. In the end, I was tripped up by the proper use of my tables, despite going over them more than once with help. My front end got partially set up, but in the end, I just didn't have the time to finish. -->
